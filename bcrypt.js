@@ -19,6 +19,10 @@ const fastifyBcrypt = fp(function (fastify, opts, next) {
     .decorateRequest('bcryptCompare', compare)
 
   next()
+},
+{
+  fastify: '4.x',
+  name: 'fastify-bcrypt',
 })
 
 module.exports = fastifyBcrypt
